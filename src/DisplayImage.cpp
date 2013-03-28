@@ -1,30 +1,36 @@
-/*
- * DisplayImage.cpp
- *
- *  Created on: Mar 22, 2013
- *      Author: joy
- */
-#include <cv.h>
-#include <highgui.h>
-
-using namespace cv;
-
-int main( int argc, char** argv )
-{
-  Mat image;
-  image = imread( argv[1], 1 );
-
-  if( argc != 2 || !image.data )
-    {
-      printf( "No image data \n" );
-      return -1;
-    }
-
-  namedWindow( "Display Image", CV_WINDOW_AUTOSIZE );
-  imshow( "Display Image", image );
-
-  waitKey(0);
-
-  return 0;
-}
-
+///*
+// * DisplayImage.cpp
+// *
+// *  Created on: Mar 22, 2013
+// *      Author: joy
+// */
+//#include <opencv2/core/core.hpp>
+//#include <opencv2/highgui/highgui.hpp>
+//#include <iostream>
+//
+//using namespace cv;
+//using namespace std;
+//
+//int main( int argc, char** argv )
+//{
+////    if( argc != 2)
+////    {
+////     cout <<" Usage: display_image ImageToLoadAndDisplay" << endl;
+////     return -1;
+////    }
+//
+//    Mat image;
+//    image = imread("BostonCityFlow.jpg", CV_LOAD_IMAGE_COLOR);   // Read the file
+//
+//    if(! image.data )                              // Check for invalid input
+//    {
+//        cout <<  "Could not open or find the image" << std::endl ;
+//        return -1;
+//    }
+//
+//    namedWindow( "Display window", CV_WINDOW_AUTOSIZE );// Create a window for display.
+//    imshow( "Display window", image );                   // Show our image inside it.
+//
+//    waitKey(0);                                          // Wait for a keystroke in the window
+//    return 0;
+//}
